@@ -1,0 +1,9 @@
+font:
+  normal:
+    family: MesloLGS NF
+  size: 13
+
+window:
+  padding:
+    x: 5
+    y: 5
