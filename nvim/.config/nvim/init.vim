@@ -32,7 +32,6 @@ Plug 'saadparwaiz1/cmp_luasnip'
 
 " other
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'preservim/nerdtree'
 call plug#end()
 
 lua require('mmx')
@@ -40,9 +39,11 @@ lua require('telescope').load_extension('fzf')
 
 set background=dark
 colorscheme gruvbox8
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
 
 let mapleader = " "
-nnoremap <leader>pv :Vex<CR>
+nnoremap <leader>pv :Ex<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <C-p> :Telescope git_files<CR>
 nnoremap <leader>pf :Telescope find_files<CR>
@@ -52,7 +53,6 @@ nnoremap <C-k> :cprev<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
-nnoremap <A-1> :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
