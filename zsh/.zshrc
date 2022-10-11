@@ -148,7 +148,7 @@ alias android_studio="nohup /home/mm/tools/android-studio/bin/studio.sh > /dev/n
 alias cat="bat"
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias dwatch='watch -n 1 "docker ps --format \"table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}\""'
-source ~/.project-aliases
+[[ ! -f ~/.projects.zsh ]] || source ~/.projects.zsh
 
 jpg_rename() {
 	jhead -exonly -n"%Y.%m.%d-%H.%M-$1" *.JPG
