@@ -17,8 +17,10 @@ export PATH=$PATH:/home/mm/tools/maven/bin
 export PATH=$PATH:/home/mm/.jenv/bin
 
 # Go
-export PATH=$PATH:/home/mm/tools/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin
+if [[ -f ~/tools/go/bin/go ]]; then
+    export PATH=$PATH:/home/mm/tools/go/bin
+    export PATH=$PATH:$(go env GOPATH)/bin
+fi
 
 # JS
 export VOLTA_HOME="$HOME/.volta"
