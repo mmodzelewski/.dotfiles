@@ -15,6 +15,7 @@ export PATH=$PATH:/home/mm/tools/Android/sdk/platform-tools
 # Java
 export PATH=$PATH:/home/mm/tools/maven/bin
 export PATH=$PATH:/home/mm/.jenv/bin
+export PATH=$PATH:/home/mm/.local/share/JetBrains/Toolbox/scripts
 
 # Go
 if [[ -f ~/tools/go/bin/go ]]; then
