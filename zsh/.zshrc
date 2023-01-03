@@ -53,6 +53,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
+zstyle ':omz:update' mode reminder
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -138,6 +139,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim=nvim
 alias idea="nohup idea . > /dev/null 2>&1 & disown"
 alias idea_run="nohup idea > /dev/null 2>&1 & disown"
 alias open='nohup nautilus . > /dev/null 2>&1 & disown'
