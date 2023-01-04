@@ -1,0 +1,44 @@
+"" Source your .vimrc
+"source ~/.config/nvim/init.vim
+
+set number
+set relativenumber
+set hlsearch
+set ignorecase
+set incsearch
+set cursorline
+set scrolloff=8
+set visualbell
+
+" Don't use Ex mode, use Q for formatting.
+let mapleader = " "
+map Q gq
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+nnoremap <leader>d yyp
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Idea specific config
+set ideajoin
+
+map <leader>l <Action>(ReformatCode)
+map <leader>rn <Action>(RenameElement)
+map <leader>k <Action>(ShowErrorDescription)
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+map <leader>e <Action>(RecentFiles)
+map <leader>n <Action>(GotoClass)
+
+vnoremap > >gv
+vnoremap < <gv
+
+" Find more examples here: https://jb.gg/share-ideavimrc
