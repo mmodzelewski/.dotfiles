@@ -18,7 +18,7 @@ export PATH=$PATH:/home/mm/.jenv/bin
 export PATH=$PATH:/home/mm/.local/share/JetBrains/Toolbox/scripts
 
 # Go
-if [[ -f ~/tools/go/bin/go ]]; then
+if [ -x "$(command -v go)" ]; then
     export PATH=$PATH:/home/mm/tools/go/bin
     export PATH=$PATH:$(go env GOPATH)/bin
 fi
@@ -180,5 +180,11 @@ source /home/mm/tools/fzf/shell/key-bindings.zsh
 
 bindkey -s ^f " tmux-sessionizer\n"
 
-eval "$(jenv init -)"
+if [ -x "$(command -v jenv)" ]; then
+    eval "$(jenv init -)"
+fi
 
+if [ -x "$(command -v ng)" ]; then
+    # Load Angular CLI autocompletion.
+    source <(ng completion script)
+fi
