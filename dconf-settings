@@ -62,6 +62,9 @@ binding='<Super>minus'
 command='toggle-mute'
 name='Toggle mute mic'
 
+[org/gnome/shell]
+disabled-extensions=['ding@rastersoft.com']
+
 [org/gnome/shell/extensions/pop-shell]
 active-hint=true
 active-hint-border-radius=uint32 6
