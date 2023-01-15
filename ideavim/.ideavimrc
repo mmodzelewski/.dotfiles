@@ -17,6 +17,8 @@ vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 nnoremap <leader>d yyp
+vnoremap <leader>d y'>p
+nnoremap <leader>p a <ESC>p
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
