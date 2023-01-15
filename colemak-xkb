@@ -1,0 +1,65 @@
+// Append content of this file to /usr/share/X11/xkb/symbols/pl 
+// source https://gist.github.com/nutel65/44568b3744beb87d339b658488ee83fa?permalink_comment_id=4317231
+// To show custom layouts in system keyboard options, 
+// you need to modify /usr/share/X11/xkb/rules/evdev.xml 
+
+xkb_symbols "colemak_dhm_normalangle_ansi" {
+
+    name[Group1]= "Polish (Colemak-DHm) [normal angle]";
+
+    key <TLDE> { [        grave,   asciitilde,      dead_tilde,       asciitilde ] };
+    key <AE01> { [            1,       exclam,      exclamdown,      onesuperior ] };
+    key <AE02> { [            2,           at,       masculine,      twosuperior ] };
+    key <AE03> { [            3,   numbersign,     ordfeminine,    threesuperior ] };
+    key <AE04> { [            4,       dollar,            cent,         sterling ] };
+    key <AE05> { [            5,      percent,        EuroSign,              yen ] };
+    key <AE06> { [            6,  asciicircum,         hstroke,          Hstroke ] };
+    key <AE07> { [            7,    ampersand,             eth,              ETH ] };
+    key <AE08> { [            8,     asterisk,           thorn,            THORN ] };
+    key <AE09> { [            9,    parenleft,  leftsinglequotemark,  leftdoublequotemark ] };
+    key <AE10> { [            0,   parenright, rightsinglequotemark,  rightdoublequotemark ] };
+    key <AE11> { [        minus,   underscore,          endash,           emdash ] };
+    key <AE12> { [        equal,         plus,        multiply,         division ] };
+
+    key <AD01> { [            q,            Q,      adiaeresis,       Adiaeresis ] };
+    key <AD02> { [            w,            W,           aring,            Aring ] };
+    key <AD03> { [            f,            F,          atilde,           Atilde ] };
+    key <AD04> { [            p,            P,          oslash,         Ooblique ] };
+    key <AD05> { [            b,            B,      dead_breve,       asciitilde ] };
+    key <AD06> { [            j,            J,         dstroke,          Dstroke ] };
+    key <AD07> { [            l,            L,         lstroke,          Lstroke ] };
+    key <AD08> { [            u,            U,          uacute,           Uacute ] };
+    key <AD09> { [            y,            Y,      udiaeresis,       Udiaeresis ] };
+    key <AD10> { [    semicolon,        colon,      odiaeresis,       Odiaeresis ] };
+    key <AD11> { [  bracketleft,    braceleft,   guillemotleft,        0x1002039 ] };
+    key <AD12> { [ bracketright,   braceright,  guillemotright,        0x100203a ] };
+    key <BKSL> { [    backslash,          bar,      asciitilde,       asciitilde ] };
+
+    key <AC01> { [            a,            A,         aogonek,          Aogonek ] };
+    key <AC02> { [            r,            R,      dead_grave,       asciitilde ] };
+    key <AC03> { [            s,            S,          sacute,           Sacute ] };
+    key <AC04> { [            t,            T,      dead_acute, dead_doubleacute ] };
+    key <AC05> { [            g,            G,     dead_ogonek,       asciitilde ] };
+    key <AC06> { [            m,            M,     dead_macron,       asciitilde ] };
+    key <AC07> { [            n,            N,          nacute,           Nacute ] };
+    key <AC08> { [            e,            E,         eogonek,          Eogonek ] };
+    key <AC09> { [            i,            I,          iacute,           Iacute ] };
+    key <AC10> { [            o,            O,          oacute,           Oacute ] };
+    key <AC11> { [   apostrophe,     quotedbl,          otilde,           Otilde ] };
+
+    key <AB01> { [            z,            Z,       zabovedot,        Zabovedot ] };
+    key <AB02> { [            x,            X,          zacute,           Zacute ] };
+    key <AB03> { [            c,            C,          cacute,           Cacute ] };
+    key <AB04> { [            d,            D,  dead_diaeresis,       asciitilde ] };
+    key <AB05> { [            v,            V,              oe,               OE ] };
+    key <AB06> { [            k,            K,  dead_abovering,       asciitilde ] };
+    key <AB07> { [            h,            H,      dead_caron,       asciitilde ] };
+    key <AB08> { [        comma,         less,    dead_cedilla,       asciitilde ] };
+    key <AB09> { [       period,      greater,   dead_abovedot,       asciitilde ] };
+    key <AB10> { [        slash,     question,    questiondown,       asciitilde ] };
+
+    key <SPCE> { [        space,        space,           space,     nobreakspace ] };
+
+    include "level3(ralt_switch)"
+};
+
