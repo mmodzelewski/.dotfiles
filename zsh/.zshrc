@@ -16,6 +16,8 @@ export PATH=$PATH:/home/mm/tools/Android/sdk/platform-tools
 export PATH=$PATH:/home/mm/tools/maven/bin
 export PATH=$PATH:/home/mm/.jenv/bin
 export PATH=$PATH:/home/mm/.local/share/JetBrains/Toolbox/scripts
+export GRAALVM_HOME=/home/mm/tools/graalvm
+export PATH=$PATH:$GRAALVM_HOME/bin
 
 # Go
 if [ -x "$(command -v go)" ]; then
