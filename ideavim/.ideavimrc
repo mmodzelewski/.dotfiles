@@ -25,11 +25,23 @@ nnoremap <C-u> <C-u>zz
 " Idea specific config
 set ideajoin
 
-map <leader>l <Action>(ReformatCode)
-map <leader>rn <Action>(RenameElement)
-map <leader>k <Action>(ShowErrorDescription)
+map <leader>tf <Action>(ReformatCode)
+map <leader>tn <Action>(RenameElement)
+map <leader>fu <Action>(FindUsages)
+map <leader>fr <Action>(RecentFiles)
+map <leader>fs <Action>(GotoClass)
+map <leader>ff <Action>(GotoFile)
+map ge <Action>(ShowErrorDescription)
+map gs <Action>(CheckinProject)
+map gl <Action>(ActivateVersionControlToolWindow)
+map gnb <Action>(GitNewBranchAction)
+map <leader>ps <Action>(FindInPath)
+
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
+map ]d <Action>(GotoNextError)
+map [d <Action>(GotoPreviousError)
+
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
@@ -39,10 +51,6 @@ map <C-i> <Action>(Forward)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
-map <leader>fr <Action>(RecentFiles)
-map <leader>fu <Action>(FindUsages)
-map <leader>fn <Action>(GotoClass)
-map <leader>ff <Action>(GotoFile)
 
 vnoremap > >gv
 vnoremap < <gv
