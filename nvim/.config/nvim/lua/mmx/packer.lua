@@ -11,8 +11,6 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use 'marko-cerovac/material.nvim'
-
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
@@ -44,4 +42,42 @@ return require('packer').startup(function(use)
     }
 
     use 'nvim-treesitter/nvim-treesitter-context'
+    use({
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        config = function()
+            require("lsp_lines").setup()
+            vim.diagnostic.config({
+                virtual_lines = false,
+            })
+        end,
+    })
+    use 'folke/tokyonight.nvim'
+    use {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup({
+                suggestion = {
+                    enabled = true,
+                    auto_trigger = true,
+                    keymap = {
+                        accept = "<M-l>",
+                        accept_word = false,
+                        accept_line = false,
+                        next = "<M-]>",
+                        prev = "<M-[>",
+                        dismiss = "<C-]>",
+                    },
+                }
+            })
+        end,
+    }
+    use {
+        'lewis6991/gitsigns.nvim',
+        tag = 'release', -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+        config = function()
+            require('gitsigns').setup()
+        end,
+    }
 end)
