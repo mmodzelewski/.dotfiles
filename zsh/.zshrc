@@ -192,3 +192,6 @@ if [ -x "$(command -v ng)" ]; then
     # Load Angular CLI autocompletion.
     source <(ng completion script)
 fi
+
+eval "$(zoxide init zsh)"
+
