@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('ThePrimeagen/harpoon')
+    use('ThePrimeagen/vim-be-good')
     use('mbbill/undotree')
 
     use('tpope/vim-fugitive')
@@ -51,7 +52,7 @@ return require('packer').startup(function(use)
             })
         end,
     })
-    use 'folke/tokyonight.nvim'
+    use 'sainnhe/sonokai'
     use {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",

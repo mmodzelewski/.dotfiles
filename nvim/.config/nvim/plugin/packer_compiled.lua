@@ -106,7 +106,7 @@ _G.packer_plugins = {
   },
   ["copilot.lua"] = {
     commands = { "Copilot" },
-    config = { "\27LJ\2\n∆\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\15suggestion\1\0\0\vkeymap\1\0\6\fdismiss\n<C-]>\16accept_word\1\16accept_line\1\tnext\n<M-]>\tprev\n<M-[>\vaccept\n<M-l>\1\0\2\17auto_trigger\2\fenabled\2\nsetup\fcopilot\frequire\0" },
+    config = { "\27LJ\2\n∆\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\15suggestion\1\0\0\vkeymap\1\0\6\16accept_word\1\tprev\n<M-[>\vaccept\n<M-l>\fdismiss\n<C-]>\tnext\n<M-]>\16accept_line\1\1\0\2\fenabled\2\17auto_trigger\2\nsetup\fcopilot\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -190,20 +190,25 @@ _G.packer_plugins = {
     path = "/home/mm/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/home/mm/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/mm/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/mm/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
   undotree = {
     loaded = true,
     path = "/home/mm/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/mm/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-fugitive"] = {
     loaded = true,
