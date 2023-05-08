@@ -18,6 +18,9 @@ switch-to-workspace-6=['<Super>6']
 switch-to-workspace-down=['<Super>Page_Down']
 switch-to-workspace-up=['<Super>Page_Up']
 
+[org/gnome/mutter]
+dynamic-workspaces=false
+
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=@as []
 area-screenshot-clip=['<Shift>Print']
