@@ -8,20 +8,20 @@ fi
 DEFAULT_USER=`whoami`
 
 # Android
-export ANDROID_HOME=/home/mm/tools/Android/sdk
-export ANDROID_SDK_ROOT=/home/mm/tools/Android/sdk
-export PATH=$PATH:/home/mm/tools/Android/sdk/platform-tools
+export ANDROID_HOME=$HOME/tools/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/tools/Android/sdk
+export PATH=$PATH:$HOME/tools/Android/sdk/platform-tools
 
 # Java
-export PATH=$PATH:/home/mm/tools/maven/bin
-export PATH=$PATH:/home/mm/.jenv/bin
-export PATH=$PATH:/home/mm/.local/share/JetBrains/Toolbox/scripts
-export GRAALVM_HOME=/home/mm/tools/graalvm
+export PATH=$PATH:$HOME/tools/maven/bin
+export PATH=$PATH:$HOME/.jenv/bin
+export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts
+export GRAALVM_HOME=$HOME/tools/graalvm
 export PATH=$PATH:$GRAALVM_HOME/bin
 
 # Go
 if [ -x "$(command -v go)" ]; then
-    export PATH=$PATH:/home/mm/tools/go/bin
+    export PATH=$PATH:$HOME/tools/go/bin
     export PATH=$PATH:$(go env GOPATH)/bin
 fi
 
@@ -31,10 +31,10 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export VOLTA_FEATURE_PNPM=1
 
 # Other
-export PATH="/home/mm/tools/Sencha/Cmd:$PATH"
+export PATH="$HOME/tools/Sencha/Cmd:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mm/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -153,7 +153,7 @@ alias sc-prez='xrandr --size 1920x1080'
 alias sc-vid='xrandr --size 2560x1440'
 alias sc-4k='xrandr --size 3840x2160'
 alias weather='curl wttr.in\?format=v2'
-alias android_studio="nohup /home/mm/tools/android-studio/bin/studio.sh > /dev/null 2>&1 & disown"
+alias android_studio="nohup $HOME/tools/android-studio/bin/studio.sh > /dev/null 2>&1 & disown"
 alias cat="bat"
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias dwatch='watch -n 1 "docker ps --format \"table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}\""'
@@ -180,7 +180,7 @@ idea_open () {
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /home/mm/tools/fzf/shell/key-bindings.zsh
+source $HOME/tools/fzf/shell/key-bindings.zsh
 
 bindkey -s ^f " tmux-sessionizer\n"
 
