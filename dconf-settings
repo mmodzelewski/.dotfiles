@@ -18,8 +18,12 @@ switch-to-workspace-6=['<Super>6']
 switch-to-workspace-down=['<Super>Page_Down']
 switch-to-workspace-up=['<Super>Page_Up']
 
+[org/gnome/desktop/interface]
+clock-format='24h'
+
 [org/gnome/mutter]
 dynamic-workspaces=false
+workspaces-only-on-primary=true
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=@as []
