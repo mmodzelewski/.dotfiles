@@ -1,16 +1,4 @@
--- Learn the keybindings, see :help lsp-zero-keybindings
--- Learn to configure LSP servers, see :help lsp-zero-api-showcase
-local lsp = require('lsp-zero')
-lsp.preset('recommended')
-
-local cmp = require('cmp')
-
-cmp.setup({
-    mapping = {
-        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-d>'] = cmp.mapping.scroll_docs(4),
-    }
-})
+local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
@@ -26,8 +14,30 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
 end)
 
+lsp.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
+})
+
 lsp.setup()
+
+
+local cmp = require('cmp')
+
+require('luasnip.loaders.from_vscode').lazy_load()
+
+cmp.setup({
+  sources = {
+    {name = 'path'},
+    {name = 'nvim_lsp'},
+    {name = 'buffer', keyword_length = 3},
+    {name = 'luasnip', keyword_length = 2},
+  }
+})
 
 vim.diagnostic.config({
     virtual_text = true,
 })
+
