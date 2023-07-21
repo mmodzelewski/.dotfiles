@@ -157,6 +157,12 @@ alias android_studio="nohup $HOME/tools/android-studio/bin/studio.sh > /dev/null
 alias cat="bat"
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias dwatch='watch -n 1 "docker ps --format \"table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}\""'
+alias tl='toggl-cli status'
+alias tls='toggl-cli start'
+alias tld='toggl-cli start Daily'
+alias tlx='toggl-cli stop'
+alias tlw='toggl-cli switch'
+alias tlr='toggl-cli restart'
 [[ ! -f ~/.projects.zsh ]] || source ~/.projects.zsh
 
 jpg_rename() {
