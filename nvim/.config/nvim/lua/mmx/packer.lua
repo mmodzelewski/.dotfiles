@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
@@ -15,6 +15,9 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/harpoon')
     use('ThePrimeagen/vim-be-good')
     use('mbbill/undotree')
+    use { 'saecki/crates.nvim', tag = 'v0.4.0',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
 
     use('tpope/vim-fugitive')
     use { 'sindrets/diffview.nvim', requires = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' } }

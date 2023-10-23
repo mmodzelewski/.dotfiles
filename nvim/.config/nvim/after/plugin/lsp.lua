@@ -12,6 +12,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>tn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("n", "<leader>tf", function() vim.lsp.buf.format() end, opts)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
+    -- vim.lsp.inlay_hint(bufnr, true)
 end)
 
 lsp.set_sign_icons({
@@ -34,6 +35,7 @@ cmp.setup({
     {name = 'nvim_lsp'},
     {name = 'buffer', keyword_length = 3},
     {name = 'luasnip', keyword_length = 2},
+    {name = 'crates'},
   }
 })
 

@@ -40,3 +40,6 @@ vim.keymap.set("", "<leader>er", function()
     })
 end, { desc = "Toggle lsp_lines" })
 
+vim.keymap.set("", "<leader>th", function()
+    vim.lsp.inlay_hint(vim.api.nvim_get_current_buf(), nil)
+end, { desc = "Toggle inlay hints" })
