@@ -36,6 +36,7 @@ map gs <Action>(CheckinProject)
 map gl <Action>(ActivateVersionControlToolWindow)
 map gnb <Action>(GitNewBranchAction)
 map <leader>ps <Action>(FindInPath)
+imap <C-y> <Action>(EditorChooseLookupItem)
 
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
