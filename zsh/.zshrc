@@ -14,6 +14,7 @@ export PATH=$PATH:$HOME/tools/Android/sdk/platform-tools
 
 # Java
 export PATH=$PATH:$HOME/tools/maven/bin
+export PATH=$PATH:$HOME/tools/gradle/bin
 export PATH=$PATH:$HOME/.jenv/bin
 export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts
 export GRAALVM_HOME=$HOME/tools/graalvm
@@ -111,8 +112,8 @@ plugins=(
   golang
   rust
   gcloud
-  sdk
   bgnotify
+  direnv
 )
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 
@@ -188,8 +189,6 @@ idea_open () {
 
 source $HOME/tools/fzf/shell/key-bindings.zsh
 
-bindkey -s ^f " tmux-sessionizer\n"
-
 if [ -x "$(command -v jenv)" ]; then
     eval "$(jenv init -)"
 fi
@@ -199,5 +198,10 @@ if [ -x "$(command -v ng)" ]; then
     source <(ng completion script)
 fi
 
-eval "$(zoxide init zsh)"
+if [ -x "$(command -v zoxide)" ]; then
+    eval "$(zoxide init zsh)"
+fi
+
+bindkey -v
+bindkey -s ^f " tmux-sessionizer\n"
 
