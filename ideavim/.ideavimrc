@@ -57,3 +57,5 @@ vnoremap > >gv
 vnoremap < <gv
 
 " Find more examples here: https://jb.gg/share-ideavimrc
+Plug 'machakann/vim-highlightedyank'
+
