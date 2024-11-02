@@ -146,6 +146,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 alias idea="nohup idea . > /dev/null 2>&1 & disown"
+alias rustrover="nohup rustrover . > /dev/null 2>&1 & disown"
 alias idea_run="nohup idea > /dev/null 2>&1 & disown"
 alias open='nohup nautilus . > /dev/null 2>&1 & disown'
 alias c='xclip -selection clipboard'
@@ -154,7 +155,6 @@ alias sc-prez='xrandr --size 1920x1080'
 alias sc-vid='xrandr --size 2560x1440'
 alias sc-4k='xrandr --size 3840x2160'
 alias weather='curl wttr.in\?format=v2'
-alias android_studio="nohup $HOME/tools/android-studio/bin/studio.sh > /dev/null 2>&1 & disown"
 alias cat="bat"
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias dwatch='watch -n 1 "docker ps --format \"table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}\""'

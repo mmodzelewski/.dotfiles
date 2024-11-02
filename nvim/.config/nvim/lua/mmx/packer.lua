@@ -62,27 +62,27 @@ return require('packer').startup(function(use)
         end,
     })
     use 'sainnhe/sonokai'
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup({
-                suggestion = {
-                    enabled = true,
-                    auto_trigger = true,
-                    keymap = {
-                        accept = "<M-l>",
-                        accept_word = false,
-                        accept_line = false,
-                        next = "<M-]>",
-                        prev = "<M-[>",
-                        dismiss = "<C-]>",
-                    },
-                }
-            })
-        end,
-    }
+--    use {
+--        "zbirenbaum/copilot.lua",
+--        cmd = "Copilot",
+--        event = "InsertEnter",
+--        config = function()
+--            require("copilot").setup({
+--                suggestion = {
+--                    enabled = true,
+--                    auto_trigger = true,
+--                    keymap = {
+--                        accept = "<M-l>",
+--                        accept_word = false,
+--                        accept_line = false,
+--                        next = "<M-]>",
+--                        prev = "<M-[>",
+--                        dismiss = "<C-]>",
+--                    },
+--                }
+--            })
+--        end,
+--    }
     use {
         'lewis6991/gitsigns.nvim',
         -- tag = 'release', -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
